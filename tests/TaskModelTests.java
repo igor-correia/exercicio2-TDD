@@ -15,11 +15,18 @@ public class TaskModelTests {
 	
 	@BeforeEach
 	public void startModel() {
-		this.taskModel = new TaskModel("Quiz de VeV");
+		this.taskModel = new TaskModel("Quiz de VeV", "Responder quiz da aula 6");
 	}
 
 	@Test
 	public void testGetTitle() {
 		assertEquals("Quiz de VeV", taskModel.getTitle());
 	}
+	
+	@Test
+	public void testGetDescription() {
+		assertEquals("Responder quiz da aula 6", taskModel.getDescription());
+	}
+	
+
 }
