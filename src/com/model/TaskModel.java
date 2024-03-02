@@ -32,4 +32,8 @@ public class TaskModel {
 		return this.priority;
 	}
 
+	public void setTitle(String newTitle) {
+		this.title = newTitle;
+	}
+
 }

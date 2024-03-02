@@ -43,5 +43,11 @@ public class TaskModelTests {
 		assertEquals(result, taskModel.getPriority());
 	}
 	
+	@Test
+	public void testSetTitle() {
+		taskModel.setTitle("Quiz de percepção computacional");
+		assertEquals("Quiz de percepção computacional", taskModel.getTitle());
+	}
+	
 
 }
