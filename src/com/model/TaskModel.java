@@ -7,11 +7,13 @@ public class TaskModel {
 	private String title;
 	private String description;
 	private LocalDate date;
+	private Priority priority;
 	
-	public TaskModel(String title, String description, LocalDate date) {
+	public TaskModel(String title, String description, LocalDate date, Priority priority) {
 		this.title = title;
 		this.description = description;
 		this.date = date;
+		this.priority = priority;
 	}
 	
 	public String getTitle() {
@@ -24,6 +26,10 @@ public class TaskModel {
 	
 	public LocalDate getDate() {
 		return this.date;
+	}
+	
+	public Priority getPriority() {
+		return this.priority;
 	}
 
 }

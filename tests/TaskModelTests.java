@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.model.TaskModel;
+import com.model.Priority;
 
 @RunWith(Suite.class)
 @SuiteClasses({})
@@ -18,7 +19,7 @@ public class TaskModelTests {
 	
 	@BeforeEach
 	public void startModel() {
-		this.taskModel = new TaskModel("Quiz de VeV", "Responder quiz da aula 6", LocalDate.now());
+		this.taskModel = new TaskModel("Quiz de VeV", "Responder quiz da aula 6", LocalDate.now(), Priority.values()[0]);
 	}
 
 	@Test
@@ -34,6 +35,12 @@ public class TaskModelTests {
 	@Test
 	public void testGetDate() {
 		assertEquals(LocalDate.now(), taskModel.getDate());
+	}
+	
+	@Test
+	public void testGetPriority() {
+		Enum result = Enum.valueOf(Priority.class, "Alta");
+		assertEquals(result, taskModel.getPriority());
 	}
 	
 
