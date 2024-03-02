@@ -2,6 +2,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.LocalDate;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +18,7 @@ public class TaskModelTests {
 	
 	@BeforeEach
 	public void startModel() {
-		this.taskModel = new TaskModel("Quiz de VeV", "Responder quiz da aula 6");
+		this.taskModel = new TaskModel("Quiz de VeV", "Responder quiz da aula 6", LocalDate.now());
 	}
 
 	@Test
@@ -26,6 +29,11 @@ public class TaskModelTests {
 	@Test
 	public void testGetDescription() {
 		assertEquals("Responder quiz da aula 6", taskModel.getDescription());
+	}
+	
+	@Test
+	public void testGetDate() {
+		assertEquals(LocalDate.now(), taskModel.getDate());
 	}
 	
 
