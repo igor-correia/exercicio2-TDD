@@ -49,5 +49,11 @@ public class TaskModelTests {
 		assertEquals("Quiz de percepção computacional", taskModel.getTitle());
 	}
 	
+	@Test
+	public void testSetDescription() {
+		taskModel.setDescription("Responder quiz da aula 7");
+		assertEquals("Responder quiz da aula 7", taskModel.getDescription());
+	}
+	
 
 }

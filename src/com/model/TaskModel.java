@@ -36,4 +36,9 @@ public class TaskModel {
 		this.title = newTitle;
 	}
 
+	public void setDescription(String newDescription) {
+		this.description = newDescription;
+		
+	}
+
 }
