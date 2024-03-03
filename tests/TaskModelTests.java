@@ -40,7 +40,7 @@ public class TaskModelTests {
 	
 	@Test
 	public void testGetPriority() {
-		Enum result = Enum.valueOf(Priority.class, "Alta");
+		Priority result = Enum.valueOf(Priority.class, "Alta");
 		assertEquals(result, taskModel.getPriority());
 	}
 	
@@ -61,6 +61,13 @@ public class TaskModelTests {
 		LocalDate date = LocalDate.of(2020, Month.JANUARY, 8);
 		taskModel.setDate(date);
 		assertEquals(date, taskModel.getDate());
+	}
+	
+	@Test
+	public void testSetPriority() {
+		Priority priority = Enum.valueOf(Priority.class, "Baixa");
+		taskModel.setPriority(priority);
+		assertEquals(priority, taskModel.getPriority());
 	}
 	
 

@@ -38,12 +38,14 @@ public class TaskModel {
 
 	public void setDescription(String newDescription) {
 		this.description = newDescription;
-		
 	}
 
 	public void setDate(LocalDate newDate) {
 		this.date = newDate;
-		
+	}
+	
+	public void setPriority(Priority newPriority) {
+		this.priority = newPriority;
 	}
 
 }
