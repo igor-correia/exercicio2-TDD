@@ -4,6 +4,7 @@ import org.junit.runners.Suite.SuiteClasses;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
+import java.time.Month;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,6 +54,13 @@ public class TaskModelTests {
 	public void testSetDescription() {
 		taskModel.setDescription("Responder quiz da aula 7");
 		assertEquals("Responder quiz da aula 7", taskModel.getDescription());
+	}
+	
+	@Test
+	public void testSetDate() {
+		LocalDate date = LocalDate.of(2020, Month.JANUARY, 8);
+		taskModel.setDate(date);
+		assertEquals(date, taskModel.getDate());
 	}
 	
 

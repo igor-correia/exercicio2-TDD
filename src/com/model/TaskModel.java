@@ -41,4 +41,9 @@ public class TaskModel {
 		
 	}
 
+	public void setDate(LocalDate newDate) {
+		this.date = newDate;
+		
+	}
+
 }
